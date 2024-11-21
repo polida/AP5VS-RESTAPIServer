@@ -20,11 +20,13 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+    // Get all users
     @GetMapping("/users")
     public List<MyUser> getAllUsers() {
         return userRepository.findAll();
     }
 
+    // Get a single user by ID
     @GetMapping("/getUser")
     public ResponseEntity<MyUser> getUserById(@RequestParam Long id) {
         Optional<MyUser> user = userRepository.findById(id);
@@ -35,6 +37,7 @@ public class UserController {
         }
     }
 
+    // Create a new user
     @PostMapping("/createUser")
     public ResponseEntity<MyUser> createUser(@RequestBody MyUser newUser) {
         if (newUser.isUserDataValid()) {
@@ -45,6 +48,7 @@ public class UserController {
         }
     }
 
+    // Update an existing user
     @PutMapping("/updateUser")
     public ResponseEntity<MyUser> updateUser(@RequestParam Long id, @RequestBody MyUser updatedUser) {
         Optional<MyUser> user = userRepository.findById(id);
@@ -60,6 +64,7 @@ public class UserController {
         }
     }
 
+    // Delete a user by ID
     @DeleteMapping("/deleteUser")
     public ResponseEntity<Void> deleteUser(@RequestParam Long id) {
         Optional<MyUser> user = userRepository.findById(id);
@@ -68,6 +73,17 @@ public class UserController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    // Delete all users
+    @DeleteMapping("/deleteAll")
+    public ResponseEntity<Void> deleteAllUsers() {
+        try {
+            userRepository.deleteAll();
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
 }

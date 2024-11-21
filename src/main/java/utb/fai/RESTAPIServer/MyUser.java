@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 @Entity
 public class MyUser {
     @Id
-    private Long id;
+    private  long id;
     private String name;
     private String email;
     private String phoneNumber;
@@ -44,7 +44,6 @@ public class MyUser {
         this.phoneNumber = phoneNumber;
     }
 
-    // method to validate user data
     public boolean isUserDataValid() {
         return isEmailValid(this.email) && isPhoneNumberValid(this.phoneNumber);
     }
