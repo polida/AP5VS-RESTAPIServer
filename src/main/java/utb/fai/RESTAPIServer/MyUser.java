@@ -1,22 +1,45 @@
 package utb.fai.RESTAPIServer;
 
-
-import java.util.regex.Pattern;
-
+import javax.persistence.*
+@Entity
 public class MyUser {
-
+    @Id
     private Long id;
     private String name;
     private String email;
     private String phoneNumber;
 
-    public MyUser() {}
+    // getters and setters
 
-    public MyUser(String name, String email, String phoneNumber) {
-        this.name = name;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
+    public Long getId() {
+        return id;
     }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    // method to validate user data
+    public boolean isUserDataValid() {
+        return name != null && !name.isEmpty() && email != null && !email.isEmpty();
+    }
+}
 
     public boolean isUserDataValid() {
         return isEmailValid(this.email) && isPhoneNumberValid(this.phoneNumber);
