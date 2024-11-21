@@ -1,6 +1,7 @@
 package utb.fai.RESTAPIServer;
 
-import javax.persistence.*
+import jakarta.persistence.*;
+
 @Entity
 public class MyUser {
     @Id
@@ -35,12 +36,15 @@ public class MyUser {
         this.email = email;
     }
 
-    // method to validate user data
-    public boolean isUserDataValid() {
-        return name != null && !name.isEmpty() && email != null && !email.isEmpty();
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
-}
 
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    // method to validate user data
     public boolean isUserDataValid() {
         return isEmailValid(this.email) && isPhoneNumberValid(this.phoneNumber);
     }
@@ -52,6 +56,4 @@ public class MyUser {
     private boolean isPhoneNumberValid(String phoneNumber) {
         return phoneNumber.matches("^(\\+\\d{1,3}( )?)?((\\(\\d{1,3}\\))|\\d{1,3})[- .]?\\d{3,4}[- .]?\\d{4}$");
     }
-    // TODO: Getters and setters
-
 }
