@@ -1,0 +1,487 @@
+test_root:
+  max_points: 10.0
+  initial_steps:
+    # spusti spring rest api server
+    - run_app: "java -jar build/libs/RESTAPIServer-0.0.1-SNAPSHOT.jar"
+    # ceka nez se server spusti (vypis textu: Started RestapiServerApplication in)
+    - create_filter_action:
+        name: "default"
+        text: "Started RestapiServerApplication in"
+        mode: "contains"
+        case_sensitive: false
+    - wait_until:
+        module_name: "default"
+        time_out: 30000
+    # cisteni databaze na zacatku
+    - run_command: "curl -X DELETE http://localhost:8080/deleteAll"
+  test_suites:
+    - test_suite:
+        name: "Testování vytváření uživatelů"
+        delay: 500
+        initial_steps:
+          # vytovreni REST testeru pro POST & GET
+          - create_rest_tester:
+              name: "user-create"
+              url: "http://localhost:8080/createUser"
+              request_type: "POST"
+              content_type: "application/json"
+          - create_rest_tester:
+              name: "user-get"
+              url: "http://localhost:8080/getUser"
+              request_type: "GET"
+        test_cases:
+          - test_case:
+              name: "Test vytvoření uživatele"
+              description: "V tomto testovacím případě bude odeslan požadavek na vytvoření jednoho uživatele. Naslědně v dalším požadavku bude ověřeno, zda tento uživatel byl opravu vytvořen."
+              steps:
+                # odesle request na vytvoreni uzivatele
+                - run_command:
+                    command: 'curl -X POST -H "Content-Type: application/json" -d \'{"id": 0, "name": "User1", "email": "test@email.com", "phoneNumber": "+420666555444"}\' http://localhost:8080/createUser'
+                # po vytvoreni obdrzi data nove ulozeneho uzivatele a ziska jeho id
+                - run_command:
+                    command: 'curl -X POST -H "Content-Type: application/json" -d \'{"id": 0, "name": "User1", "email": "testemail.com", "phoneNumber": "+420666555444"}\' http://localhost:8080/createUser'
+                # ocekava ze prijata zprava bude obsahovat kod 400 bad request
+                - assert_string:
+                    var_name: "user-create-last-msg"
+                    expected: "ERROR: 400"
+                    mode: "contains"
+                    case_sensitive: false
+          - test_case:
+              name: "Test vytvoření uživatele s neplatným telefonem"
+              description: "Bude testováno, zda uživatel s neplatným telefonním číslem nebude vytvořen."
+              steps:
+                # odesle request na vytvoreni uzivatele
+                - run_command:
+                    command: 'curl -X POST -H "Content-Type: application/json" -d \'{"id": 0, "name": "User1", "email": "test@email.com", "phoneNumber": "+44434invalid"}\' http://localhost:8080/createUser'
+                # ocekava ze prijata zprava bude obsahovat kod 400 bad request
+                - assert_string:
+                    var_name: "user-create-last-msg"
+                    expected: "ERROR: 400"
+                    mode: "contains"
+                    case_sensitive: false
+    - test_suite:
+        name: "Testování aktualizace uživatelů"
+        delay: 500
+        initial_steps:
+          # vytovreni REST testeru pro PUT & GET
+          - create_rest_tester:
+              name: "user-edit"
+              url: "http://localhost:8080/editUser"
+              request_type: "PUT"
+              content_type: "application/json"
+          - create_rest_tester:
+              name: "user-get"
+              url: "http://localhost:8080/getUser"
+              request_type: "GET"
+          - create_rest_tester:
+              name: "user-all"
+              url: "http://localhost:8080/users"
+              request_type: "GET"
+        test_cases:
+          - test_case:
+              name: "Test aktualizace uživatele"
+              description: "V tomto testovacím případě bude odeslán požadavek na úpravu jednoho uživatele uživatele. Naslědně v další požadavku bude ověřeno, zda tento uživatel byl opravdu upraven."
+              steps:
+                # odesle pozadavek na ziskani vsech uzivatelu
+                - run_command:
+                    command: 'curl -X GET http://localhost:8080/users'
+                # ziska prvniho uzivatele z listu (index 0)
+                - json_get:
+                    to_var: "var-user"
+                    from_var: "user-all-last-msg"
+                    param_name: "0"
+                # ziska jeho id
+                - json_get:
+                    to_var: "var-id"
+                    from_var: "var-user"
+                    param_name: "id"
+                # zmeni jeho udeje za jine platne
+                - run_command:
+                    command: 'curl -X PUT -H "Content-Type: application/json" -d \'{"id": $var-id, "name": "updated", "email": "updated@email.com", "phoneNumber": "+420777666444"}\' http://localhost:8080/editUser?id=$var-id'
+                # ziska tohoto uzivatele znovu
+                - run_command:
+                    command: 'curl -X GET http://localhost:8080/getUser?id=$var-id'
+                # overi zda pozmeneny uzivatel odpovida ocekavani
+                - assert_json:
+                    var_name: "user-get-last-msg"
+                    expected: '{"id": $var-id, "name": "updated", "email": "updated@email.com", "phoneNumber": "+420777666444"}'
+                    exact_mode: false
+          - test_case:
+              name: "Test aktualizace uživatele s neplatnými údaji 1"
+              description: "V tomto testovacím případě bude odeslán požadavek na úpravu jednoho uživatele s neplatnými údaji. Předpokládá se, že tato úprava nebude umožněna."
+              steps:
+                # odesle pozadavek na ziskani vsech uzivatelu
+                - run_command:
+                    command: 'curl -X GET http://localhost:8080/users'
+                # ziska prvniho uzivatele z listu (index 0)
+                - json_get:
+                    to_var: "var-user"
+                    from_var: "user-all-last-msg"
+                    param_name: "0"
+                # ziska jeho id
+                - json_get:
+                    to_var: "var-id"
+                    from_var: "var-user"
+                    param_name: "id"
+                # zmeni jeho udeje za jine neplatne
+                - run_command:
+                    command: 'curl -X PUT -H "Content-Type: application/json" -d \'{"id": $var-id, "name": "updated", "email": "updated-email.cz", "phoneNumber": "+420777666444"}\' http://localhost:8080/editUser?id=$var-id'
+                # ocekava ze prijata zprava bude obsahovat kod 400 bad request
+                - assert_string:
+                    var_name: "user-edit-last-msg"
+                    expected: "ERROR: 400"
+                    mode: "contains"
+                    case_sensitive: false
+          - test_case:
+              name: "Test aktualizace uživatele s neplatnými údaji 2"
+              description: "V tomto testovacím případě bude odeslán požadavek na úpravu jednoho uživatele s neplatnými údaji."
+              steps:
+                # odesle pozadavek na ziskani vsech uzivatelu
+                - run_command:
+                    command: 'curl -X GET http://localhost:8080/users'
+                # ziska prvniho uzivatele z listu (index 0)
+                - json_get:
+                    to_var: "var-user"
+                    from_var: "user-all-last-msg"
+                    param_name: "0"
+                # ziska jeho id
+                - json_get:
+                    to_var: "var-id"
+                    from_var: "var-user"
+                    param_name: "id"
+                # zmeni jeho udeje za jine neplatne
+                - run_command:
+                    command: 'curl -X PUT -H "Content-Type: application/json" -d \'{"id": $var-id, "name": "", "email": "updated@email.cz", "phoneNumber": "+420777666444"}\' http://localhost:8080/editUser?id=$var-id'
+                # ocekava ze prijata zprava bude obsahovat kod 400 bad request
+                - assert_string:
+                    var_name: "user-edit-last-msg"
+                    expected: "ERROR: 400"
+                    mode: "contains"
+                    case_sensitive: false
+    - test_suite:
+        name: "Testování požadavků pro odstranění"
+        delay: 500
+        initial_steps:
+          # vytovreni REST testeru pro POST & DELETE & GET
+          - create_rest_tester:
+              name: "user-delete"
+              url: "http://localhost:8080/deleteUser"
+              request_type: "DELETE"
+          - create_rest_tester:
+              name: "user-delete-all"
+              url: "http://localhost:8080/deleteAll"
+              request_type: "DELETE"
+          - create_rest_tester:
+              name: "user-all"
+              url: "http://localhost:8080/users"
+              request_type: "GET"
+          - create_rest_tester:
+              name: "user-get"
+              url: "http://localhost:8080/getUser"
+              request_type: "GET"
+          - create_rest_tester:
+              name: "user-create"
+              url: "http://localhost:8080/createUser"
+              request_type: "POST"
+          # vlozi dalsi uzivatele
+          - run_command:
+              command: 'curl -X POST -H "Content-Type: application/json" -d \'{"id": 0, "name": "TestUser1", "email": "test1@email.com", "phoneNumber": "+420777666555"}\' http://localhost:8080/createUser'
+          - run_command:
+              command: 'curl -X POST -H "Content-Type: application/json" -d \'{"id": 0, "name": "TestUser2", "email": "test2@email.com", "phoneNumber": "+420777666555"}\' http://localhost:8080/createUser'
+        test_cases:
+          - test_case:
+              name: "Test odstranění jednoho uživatele"
+              description: "Bude testováno, zda je možné odstranit jednoho uživatele."
+              steps:
+                # odesle pozadavek na ziskani vsech uzivatelu
+                - run_command:
+                    command: 'curl -X GET http://localhost:8080/users'
+                # ziska prvniho uzivatele z listu (index 0)
+                - json_get:
+                    to_var: "var-user"
+                    from_var: "user-all-last-msg"
+                    param_name: "0"
+                # ziska jeho id
+                - json_get:
+                    to_var: "var-id"
+                    from_var: "var-user"
+                    param_name: "id"
+                # odstrani tohoto uzivatele
+                - run_command:
+                    command: 'curl -X DELETE http://localhost:8080/deleteUser?id=$var-id'
+                # pokusi se znovu ziskat tohoto uzivatele
+                - run_command:
+                    command: 'curl -X GET http://localhost:8080/getUser?id=$var-id'
+                # ocekava chybu 404 not found
+                - assert_string:
+                    var_name: "user-get-last-msg"
+                    expected: "ERROR: 404"
+                    mode: "contains"
+                    case_sensitive: false
+          - test_case:
+              name: "Test odstranění všech uživatelů"
+              description: "Bude testováno, zda je možné odstranit všechny uživatele v databázi."
+              steps:
+                # odstrani vsechny uzivatele
+                - run_command:
+                    command: 'curl -X DELETE http://localhost:8080/deleteAll'
+                # ziska vsechny uzivatele
+                - run_command:
+                    command: 'curl -X GET http://localhost:8080/users'
+                # v tuto chvili by zde nemel byt zadny
+                - assert_string:
+                    var_name: "user-all-last-msg"
+                    expected: "[]"
+                    mode: "contains"
+test_root:
+    max_points: 10.0
+    initial_steps:
+      # spusti spring rest api server
+      - run_app: "java -jar build/libs/RESTAPIServer-0.0.1-SNAPSHOT.jar"
+      # ceka nez se server spusti (vypis textu: Started RestapiServerApplication in)
+      - create_filter_action:
+          name: "default"
+          text: "Started RestapiServerApplication in"
+          mode: "contains"
+          case_sensitive: false
+      - wait_until:
+          module_name: "default"
+          time_out: 30000
+      # cisteni databaze na zacatku
+      - run_command: "curl -X DELETE http://localhost:8080/deleteAll"
+    test_suites:
+      - test_suite:
+          name: "Testování vytváření uživatelů"
+          delay: 500
+          initial_steps:
+            # vytovreni REST testeru pro POST & GET
+            - create_rest_tester:
+                name: "user-create"
+                url: "http://localhost:8080/createUser"
+                request_type: "POST"
+                content_type: "application/json"
+            - create_rest_tester:
+                name: "user-get"
+                url: "http://localhost:8080/getUser"
+                request_type: "GET"
+          test_cases:
+            - test_case:
+                name: "Test vytvoření uživatele"
+                description: "V tomto testovacím případě bude odeslan požadavek na vytvoření jednoho uživatele. Naslědně v dalším požadavku bude ověřeno, zda tento uživatel byl opravu vytvořen."
+                steps:
+                  # odesle request na vytvoreni uzivatele
+                  - run_command:
+                      command: 'curl -X POST -H "Content-Type: application/json" -d \'{"id": 0, "name": "User1", "email": "test@email.com", "phoneNumber": "+420666555444"}\' http://localhost:8080/createUser'
+                  # po vytvoreni obdrzi data nove ulozeneho uzivatele a ziska jeho id
+                  - json_get:
+                      to_var: "var-id"
+                      from_var: "user-create-last-msg"
+                      param_name: "id"
+                  # odesle pozadavek na ziskani specifického uzivatele
+                  - run_command:
+                      command: 'curl -X GET http://localhost:8080/getUser?id=$var-id'
+                  # overi zda ulozeny uzivatel odpovida ocekavani
+                  - assert_json:
+                      var_name: "user-get-last-msg"
+                      expected: '{"id": $var-id, "name": "User1", "email": "test@email.com", "phoneNumber": "+420666555444"}'
+                      exact_mode: false
+            - test_case:
+                name: "Test vytvoření uživatele s neplatným emailem"
+                description: "Bude testováno, zda uživatel s neplatným emailem nebude vytvořen."
+                steps:
+                  # odesle request na vytvoreni uzivatele
+                  - run_command:
+                      command: 'curl -X POST -H "Content-Type: application/json" -d \'{"id": 0, "name": "User1", "email": "testemail.com", "phoneNumber": "+420666555444"}\' http://localhost:8080/createUser'
+                  # ocekava ze prijata zprava bude obsahovat kod 400 bad request
+                  - assert_string:
+                      var_name: "user-create-last-msg"
+                      expected: "ERROR: 400"
+                      mode: "contains"
+                      case_sensitive: false
+            - test_case:
+                name: "Test vytvoření uživatele s neplatným telefonem"
+                description: "Bude testováno, zda uživatel s neplatným telefonním číslem nebude vytvořen."
+                steps:
+                  # odesle request na vytvoreni uzivatele
+                  - run_command:
+                      command: 'curl -X POST -H "Content-Type: application/json" -d \'{"id": 0, "name": "User1", "email": "test@email.com", "phoneNumber": "+44434invalid"}\' http://localhost:8080/createUser'
+                  # ocekava ze prijata zprava bude obsahovat kod 400 bad request
+                  - assert_string:
+                      var_name: "user-create-last-msg"
+                      expected: "ERROR: 400"
+                      mode: "contains"
+                      case_sensitive: false
+      - test_suite:
+          name: "Testování aktualizace uživatelů"
+          delay: 500
+          initial_steps:
+            # vytovreni REST testeru pro PUT & GET
+            - create_rest_tester:
+                name: "user-edit"
+                url: "http://localhost:8080/editUser"
+                request_type: "PUT"
+                content_type: "application/json"
+            - create_rest_tester:
+                name: "user-get"
+                url: "http://localhost:8080/getUser"
+                request_type: "GET"
+            - create_rest_tester:
+                name: "user-all"
+                url: "http://localhost:8080/users"
+                request_type: "GET"
+          test_cases:
+            - test_case:
+                name: "Test aktualizace uživatele"
+                description: "V tomto testovacím případě bude odeslán požadavek na úpravu jednoho uživatele uživatele. Naslědně v další požadavku bude ověřeno, zda tento uživatel byl opravdu upraven."
+                steps:
+                  # odesle pozadavek na ziskani vsech uzivatelu
+                  - run_command:
+                      command: 'curl -X GET http://localhost:8080/users'
+                  # ziska prvniho uzivatele z listu (index 0)
+                  - json_get:
+                      to_var: "var-user"
+                      from_var: "user-all-last-msg"
+                      param_name: "0"
+                  # ziska jeho id
+                  - json_get:
+                      to_var: "var-id"
+                      from_var: "var-user"
+                      param_name: "id"
+                  # zmeni jeho udeje za jine platne
+                  - run_command:
+                      command: 'curl -X PUT -H "Content-Type: application/json" -d \'{"id": $var-id, "name": "updated", "email": "updated@email.com", "phoneNumber": "+420777666444"}\' http://localhost:8080/editUser?id=$var-id'
+                  # ziska tohoto uzivatele znovu
+                  - run_command:
+                      command: 'curl -X GET http://localhost:8080/getUser?id=$var-id'
+                  # overi zda pozmeneny uzivatel odpovida ocekavani
+                  - assert_json:
+                      var_name: "user-get-last-msg"
+                      expected: '{"id": $var-id, "name": "updated", "email": "updated@email.com", "phoneNumber": "+420777666444"}'
+                      exact_mode: false
+            - test_case:
+                name: "Test aktualizace uživatele s neplatnými údaji 1"
+                description: "V tomto testovacím případě bude odeslán požadavek na úpravu jednoho uživatele s neplatnými údaji. Předpokládá se, že tato úprava nebude umožněna."
+                steps:
+                  # odesle pozadavek na ziskani vsech uzivatelu
+                  - run_command:
+                      command: 'curl -X GET http://localhost:8080/users'
+                  # ziska prvniho uzivatele z listu (index 0)
+                  - json_get:
+                      to_var: "var-user"
+                      from_var: "user-all-last-msg"
+                      param_name: "0"
+                  # ziska jeho id
+                  - json_get:
+                      to_var: "var-id"
+                      from_var: "var-user"
+                      param_name: "id"
+                  # zmeni jeho udeje za jine neplatne
+                  - run_command:
+                      command: 'curl -X PUT -H "Content-Type: application/json" -d \'{"id": $var-id, "name": "updated", "email": "updated-email.cz", "phoneNumber": "+420777666444"}\' http://localhost:8080/editUser?id=$var-id'
+                  # ocekava ze prijata zprava bude obsahovat kod 400 bad request
+                  - assert_string:
+                      var_name: "user-edit-last-msg"
+                      expected: "ERROR: 400"
+                      mode: "contains"
+                      case_sensitive: false
+            - test_case:
+                name: "Test aktualizace uživatele s neplatnými údaji 2"
+                description: "V tomto testovacím případě bude odeslán požadavek na úpravu jednoho uživatele s neplatnými údaji."
+                steps:
+                  # odesle pozadavek na ziskani vsech uzivatelu
+                  - run_command:
+                      command: 'curl -X GET http://localhost:8080/users'
+                  # ziska prvniho uzivatele z listu (index 0)
+                  - json_get:
+                      to_var: "var-user"
+                      from_var: "user-all-last-msg"
+                      param_name: "0"
+                  # ziska jeho id
+                  - json_get:
+                      to_var: "var-id"
+                      from_var: "var-user"
+                      param_name: "id"
+                  # zmeni jeho udeje za jine neplatne
+                  - run_command:
+                      command: 'curl -X PUT -H "Content-Type: application/json" -d \'{"id": $var-id, "name": "", "email": "updated@email.cz", "phoneNumber": "+420777666444"}\' http://localhost:8080/editUser?id=$var-id'
+                  # ocekava ze prijata zprava bude obsahovat kod 400 bad request
+                  - assert_string:
+                      var_name: "user-edit-last-msg"
+                      expected: "ERROR: 400"
+                      mode: "contains"
+                      case_sensitive: false
+      - test_suite:
+          name: "Testování požadavků pro odstranění"
+          delay: 500
+          initial_steps:
+            # vytovreni REST testeru pro POST & DELETE & GET
+            - create_rest_tester:
+                name: "user-delete"
+                url: "http://localhost:8080/deleteUser"
+                request_type: "DELETE"
+            - create_rest_tester:
+                name: "user-delete-all"
+                url: "http://localhost:8080/deleteAll"
+                request_type: "DELETE"
+            - create_rest_tester:
+                name: "user-all"
+                url: "http://localhost:8080/users"
+                request_type: "GET"
+            - create_rest_tester:
+                name: "user-get"
+                url: "http://localhost:8080/getUser"
+                request_type: "GET"
+            - create_rest_tester:
+                name: "user-create"
+                url: "http://localhost:8080/createUser"
+                request_type: "POST"
+            # vlozi dalsi uzivatele
+            - run_command:
+                command: 'curl -X POST -H "Content-Type: application/json" -d \'{"id": 0, "name": "TestUser1", "email": "test1@email.com", "phoneNumber": "+420777666555"}\' http://localhost:8080/createUser'
+            - run_command:
+                command: 'curl -X POST -H "Content-Type: application/json" -d \'{"id": 0, "name": "TestUser2", "email": "test2@email.com", "phoneNumber": "+420777666555"}\' http://localhost:8080/createUser'
+          test_cases:
+            - test_case:
+                name: "Test odstranění jednoho uživatele"
+                description: "Bude testováno, zda je možné odstranit jednoho uživatele."
+                steps:
+                  # odesle pozadavek na ziskani vsech uzivatelu
+                  - run_command:
+                      command: 'curl -X GET http://localhost:8080/users'
+                  # ziska prvniho uzivatele z listu (index 0)
+                  - json_get:
+                      to_var: "var-user"
+                      from_var: "user-all-last-msg"
+                      param_name: "0"
+                  # ziska jeho id
+                  - json_get:
+                      to_var: "var-id"
+                      from_var: "var-user"
+                      param_name: "id"
+                  # odstrani tohoto uzivatele
+                  - run_command:
+                      command: 'curl -X DELETE http://localhost:8080/deleteUser?id=$var-id'
+                  # pokusi se znovu ziskat tohoto uzivatele
+                  - run_command:
+                      command: 'curl -X GET http://localhost:8080/getUser?id=$var-id'
+                  # ocekava chybu 404 not found
+                  - assert_string:
+                      var_name: "user-get-last-msg"
+                      expected: "ERROR: 404"
+                      mode: "contains"
+                      case_sensitive: false
+            - test_case:
+                name: "Test odstranění všech uživatelů"
+                description: "Bude testováno, zda je možné odstranit všechny uživatele v databázi."
+                steps:
+                  # odstrani vsechny uzivatele
+                  - run_command:
+                      command: 'curl -X DELETE http://localhost:8080/deleteAll'
+                  # ziska vsechny uzivatele
+                  - run_command:
+                      command: 'curl -X GET http://localhost:8080/users'
+                  # v tuto chvili by zde nemel byt zadny
+                  - assert_string:
+                      var_name: "user-all-last-msg"
+                      expected: "[]"
+                      mode: "contains"

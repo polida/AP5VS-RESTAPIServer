@@ -5,16 +5,13 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping(value = "", produces = { "application/json" }, consumes = { "application/json" })
+
 public class UserController {
 
     @Autowired
@@ -40,44 +37,46 @@ public class UserController {
     // Create a new user
     @PostMapping("/createUser")
     public ResponseEntity<MyUser> createUser(@RequestBody MyUser newUser) {
-        if (newUser.isUserDataValid()) {
+        if(userRepository.existsById(newUser.getId())  || !newUser.isUserDataValid()){
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            }
             MyUser savedUser = userRepository.save(newUser);
             return new ResponseEntity<>(savedUser, HttpStatus.CREATED);
-        } else {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-        }
     }
 
     // Update an existing user
-    @PutMapping("/updateUser")
+    @PutMapping("/editUser")
     public ResponseEntity<MyUser> updateUser(@RequestParam Long id, @RequestBody MyUser updatedUser) {
-        Optional<MyUser> user = userRepository.findById(id);
-        if (user.isPresent()) {
+        try {
+            Optional<MyUser> user = userRepository.findById(id);
+            if (!user.isPresent()) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
             MyUser existingUser = user.get();
             existingUser.setName(updatedUser.getName());
             existingUser.setEmail(updatedUser.getEmail());
             existingUser.setPhoneNumber(updatedUser.getPhoneNumber());
             MyUser savedUser = userRepository.save(existingUser);
             return new ResponseEntity<>(savedUser, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
 
     // Delete a user by ID
-    @DeleteMapping("/deleteUser")
+    @DeleteMapping(value = "/deleteUser")
     public ResponseEntity<Void> deleteUser(@RequestParam Long id) {
-        Optional<MyUser> user = userRepository.findById(id);
-        if (user.isPresent()) {
+        try {
+            Optional<MyUser> user = userRepository.findById(id);
             userRepository.delete(user.get());
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
 
     // Delete all users
-    @DeleteMapping("/deleteAll")
+    @DeleteMapping(value = "/deleteAll")
     public ResponseEntity<Void> deleteAllUsers() {
         try {
             userRepository.deleteAll();
