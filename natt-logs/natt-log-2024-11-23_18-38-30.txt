@@ -1,0 +1,8 @@
+[18:38:30][PluginLoader][WARNING] Plugins directory not found.
+[18:38:30][ProcessManager][WARNING] Failed to terminate process PID 9764
+[18:38:30][NATTCore][INFO] NATT CORE initialization done
+Version: 1.7.0 
+Configuration path: .\test-config-6.yaml
+Configuration loading mode: FROM HOST
+[18:38:30][NATTCore][INFO] Working directory path: C:\Users\polid\IdeaProjects\AP5VS-RESTAPIServer
+[18:38:30][NATTCore][INFO] Start loading of the configuration file ...

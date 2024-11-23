@@ -1,0 +1,205 @@
+[15:14:03][PluginLoader][WARNING] Plugins directory not found.
+[15:14:03][NATTCore][INFO] NATT CORE initialization done
+Version: 1.7.0 
+Configuration path: https://gitlab.com/ap5vs/test-config/restful-api-server-config/-/raw/main/test-config-6.yaml?ref_type=heads
+Configuration loading mode: FROM URL
+[15:14:03][NATTCore][INFO] Working directory path: C:\Users\polid\IdeaProjects\AP5VS-RESTAPIServer
+[15:14:03][NATTCore][INFO] Start loading of the configuration file ...
+[15:14:04][NetworkIO][INFO] Yaml data has been loaded from network location (https://gitlab.com/ap5vs/test-config/restful-api-server-config/-/raw/main/test-config-6.yaml?ref_type=heads)
+[15:14:04][NATTCore][INFO] Configuration loading done
+[15:14:04][NATTCore][INFO] Start building test structure according to the configuration ...
+[15:14:04][NATTCore][INFO] Test structure ...
+[15:14:05][NATTCore][INFO] Test structure building done
+[15:14:05][NATTCore][INFO] Start test executing ...
+[15:14:05][TestReportGenerator][INFO] Extenet reports generated. Final report will be saved to file: test_report.html
+[15:14:05][NATTCore][INFO] Starts execution on the root keyword  ...
+[15:14:05][MessageBuffer][INFO] Message buffer created for module with name: default
+[15:14:05][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar build/libs/RESTAPIServer-0.0.1-SNAPSHOT.jar
+[15:14:05][ProcessManager][INFO] New PID (18956) added to file
+[15:14:05][WaitUntilKw][INFO] Waiting for action. Actions count: 1, Time out: 30000 ms
+[15:14:07][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[15:14:07][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '  .   ____          _            __ _ _'
+[15:14:07][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \'
+[15:14:07][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \'
+[15:14:07][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' \\/  ___)| |_)| | | | | || (_| |  ) ) ) )'
+[15:14:07][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '  '  |____| .__|_| |_|_| |_\__, | / / / /'
+[15:14:07][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' =========|_|==============|___/=/_/_/_/'
+[15:14:07][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' :: Spring Boot ::                (v3.2.4)'
+[15:14:07][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[15:14:07][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:07.504+01:00  INFO 18956 --- [RESTAPIServer] [           main] u.f.R.RestapiServerApplication           : Starting RestapiServerApplication v0.0.1-SNAPSHOT using Java 17.0.12 with PID 18956 (C:\Users\polid\IdeaProjects\AP5VS-RESTAPIServer\build\libs\RESTAPIServer-0.0.1-SNAPSHOT.jar started by polid in C:\Users\polid\IdeaProjects\AP5VS-RESTAPIServer)'
+[15:14:07][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:07.523+01:00  INFO 18956 --- [RESTAPIServer] [           main] u.f.R.RestapiServerApplication           : No active profile set, falling back to 1 default profile: "default"'
+[15:14:08][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:08.974+01:00  INFO 18956 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode'
+[15:14:08][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:08.976+01:00  INFO 18956 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.'
+[15:14:09][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:09.038+01:00  INFO 18956 --- [RESTAPIServer] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface utb.fai.RESTAPIServer.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.'
+[15:14:09][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:09.039+01:00  INFO 18956 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 0 JDBC repository interfaces.'
+[15:14:09][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:09.059+01:00  INFO 18956 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode'
+[15:14:09][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:09.060+01:00  INFO 18956 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.'
+[15:14:09][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:09.112+01:00  INFO 18956 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 1 JPA repository interface.'
+[15:14:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:10.088+01:00  INFO 18956 --- [RESTAPIServer] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)'
+[15:14:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:10.108+01:00  INFO 18956 --- [RESTAPIServer] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]'
+[15:14:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:10.109+01:00  INFO 18956 --- [RESTAPIServer] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]'
+[15:14:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:10.179+01:00  INFO 18956 --- [RESTAPIServer] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext'
+[15:14:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:10.183+01:00  INFO 18956 --- [RESTAPIServer] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2479 ms'
+[15:14:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:10.446+01:00  INFO 18956 --- [RESTAPIServer] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]'
+[15:14:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:10.543+01:00  INFO 18956 --- [RESTAPIServer] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final'
+[15:14:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:10.605+01:00  INFO 18956 --- [RESTAPIServer] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled'
+[15:14:11][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:11.034+01:00  INFO 18956 --- [RESTAPIServer] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer'
+[15:14:11][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:11.079+01:00  INFO 18956 --- [RESTAPIServer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...'
+[15:14:11][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:11.944+01:00  INFO 18956 --- [RESTAPIServer] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@667797f'
+[15:14:11][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:11.947+01:00  INFO 18956 --- [RESTAPIServer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.'
+[15:14:12][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:12.086+01:00  WARN 18956 --- [RESTAPIServer] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)'
+[15:14:13][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:13.226+01:00  INFO 18956 --- [RESTAPIServer] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)'
+[15:14:13][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:13.389+01:00  INFO 18956 --- [RESTAPIServer] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default''
+[15:14:13][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:13.831+01:00  WARN 18956 --- [RESTAPIServer] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning'
+[15:14:14][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:14.815+01:00  INFO 18956 --- [RESTAPIServer] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '''
+[15:14:14][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:14.854+01:00  INFO 18956 --- [RESTAPIServer] [           main] u.f.R.RestapiServerApplication           : Started RestapiServerApplication in 8.343 seconds (process running for 9.332)'
+[15:14:14][WaitUntilKw][INFO] Action triggered from module 'default'
+[15:14:14][NATTContext][INFO] Data has been stored in to the variable 'default-action-msg'. Data value: 2024-11-23T15:14:14.854+01:00  INFO 18956 --- [RESTAPIServer] [           main] u.f.R.RestapiServerApplication           : Started RestapiServerApplication in 8.343 seconds (process running for 9.332)
+[15:14:14][WaitUntilKw][INFO] Action was invoked. Elapsed time: 9378 ms
+[15:14:14][MessageBuffer][INFO] Message buffer created for module with name: module-1
+[15:14:15][RESTTester][INFO] (module-1) Sending a DELETE request on endpoint: http://localhost:8080/deleteAll
+[15:14:15][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:15.282+01:00  INFO 18956 --- [RESTAPIServer] [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet''
+[15:14:15][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:15.282+01:00  INFO 18956 --- [RESTAPIServer] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet''
+[15:14:15][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:15.285+01:00  INFO 18956 --- [RESTAPIServer] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms'
+[15:14:15][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:15.439+01:00  WARN 18956 --- [RESTAPIServer] [nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]'
+[15:14:15][RESTTester][WARNING] (module-1) HTTP request returned an error status: 415
+[15:14:15][MessageBuffer][INFO] Message added to buffer [ Mod: module-1 | Tag: http://localhost:8080/deleteAll ] Content: 'ERROR: 415'
+[15:14:15][MessageBuffer][INFO] Message buffer created for module with name: user-create
+[15:14:15][MessageBuffer][INFO] Message buffer created for module with name: user-get
+[15:14:16][TestSuiteKw][INFO] Test case 'Test vytvoření uživatele' starts executing now
+[15:14:16][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[15:14:16][RESTTester][WARNING] (user-create) HTTP request returned an error status: 400
+[15:14:16][MessageBuffer][INFO] Message added to buffer [ Mod: user-create | Tag: http://localhost:8080/createUser ] Content: 'ERROR: 400'
+[15:14:16][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[15:14:16][RESTTester][INFO] (user-get) Sending a GET request on endpoint: http://localhost:8080/getUser
+[15:14:16][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:16.695+01:00  WARN 18956 --- [RESTAPIServer] [nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]'
+[15:14:16][RESTTester][WARNING] (user-get) HTTP request returned an error status: 415
+[15:14:16][MessageBuffer][INFO] Message added to buffer [ Mod: user-get | Tag: http://localhost:8080/getUser ] Content: 'ERROR: 415'
+[15:14:16][AssertJsonKw][WARNING] Error parsing JSON: Unexpected character (',' (code 44)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: (String)"{"id": , "name": "User1", "email": "test@email.com", "phoneNumber": "+420666555444"}"; line: 1, column: 9]
+[15:14:16][AssertJsonKw][WARNING] Assertion failed. True was expected as the result. Condition: (Expected JSON '{"id": , "name": "User1", "email": "test@email.com", "phoneNumber": "+420666555444"}' must be same as the JSON in the variable 'ERROR: 415')
+[15:14:16][TestSuiteKw][ERROR] Test suite 'Testování vytváření uživatelů' - Test case 'Test vytvoření uživatele' failed
+[15:14:16][MessageBuffer][INFO] Message buffer cleared
+[15:14:17][TestSuiteKw][INFO] Test case 'Test vytvoření uživatele s neplatným emailem' starts executing now
+[15:14:17][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[15:14:17][RESTTester][WARNING] (user-create) HTTP request returned an error status: 400
+[15:14:17][MessageBuffer][INFO] Message added to buffer [ Mod: user-create | Tag: http://localhost:8080/createUser ] Content: 'ERROR: 400'
+[15:14:17][TestSuiteKw][INFO] Test suite 'Testování vytváření uživatelů' - Test case 'Test vytvoření uživatele s neplatným emailem' passed
+[15:14:17][MessageBuffer][INFO] Message buffer cleared
+[15:14:18][TestSuiteKw][INFO] Test case 'Test vytvoření uživatele s neplatným telefonem' starts executing now
+[15:14:18][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[15:14:18][RESTTester][WARNING] (user-create) HTTP request returned an error status: 400
+[15:14:18][MessageBuffer][INFO] Message added to buffer [ Mod: user-create | Tag: http://localhost:8080/createUser ] Content: 'ERROR: 400'
+[15:14:18][TestSuiteKw][INFO] Test suite 'Testování vytváření uživatelů' - Test case 'Test vytvoření uživatele s neplatným telefonem' passed
+[15:14:18][MessageBuffer][INFO] Message buffer cleared
+[15:14:18][MessageBuffer][INFO] Message buffer cleared
+[15:14:18][RESTTester][INFO] (user-create) REST tester [user-create] terminated
+[15:14:18][RESTTester][INFO] (user-get) REST tester [user-get] terminated
+[15:14:18][MessageBuffer][INFO] Message buffer created for module with name: user-edit
+[15:14:18][MessageBuffer][INFO] Message buffer created for module with name: user-all
+[15:14:18][TestSuiteKw][INFO] Test case 'Test aktualizace uživatele' starts executing now
+[15:14:18][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[15:14:18][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:18.944+01:00  WARN 18956 --- [RESTAPIServer] [nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]'
+[15:14:18][RESTTester][WARNING] (user-all) HTTP request returned an error status: 415
+[15:14:18][MessageBuffer][INFO] Message added to buffer [ Mod: user-all | Tag: http://localhost:8080/users ] Content: 'ERROR: 415'
+[15:14:18][NATTContext][INFO] Data has been stored in to the variable 'var-user'. Data value: 
+[15:14:18][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[15:14:18][RESTTester][INFO] (user-edit) Sending a PUT request on endpoint: http://localhost:8080/editUser
+[15:14:18][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:18.966+01:00  WARN 18956 --- [RESTAPIServer] [nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'id' for method parameter type Long is not present]'
+[15:14:18][RESTTester][WARNING] (user-edit) HTTP request returned an error status: 400
+[15:14:18][MessageBuffer][INFO] Message added to buffer [ Mod: user-edit | Tag: http://localhost:8080/editUser ] Content: 'ERROR: 400'
+[15:14:18][RESTTester][INFO] (user-get) Sending a GET request on endpoint: http://localhost:8080/getUser
+[15:14:18][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:18.974+01:00  WARN 18956 --- [RESTAPIServer] [nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]'
+[15:14:18][RESTTester][WARNING] (user-get) HTTP request returned an error status: 415
+[15:14:18][MessageBuffer][INFO] Message added to buffer [ Mod: user-get | Tag: http://localhost:8080/getUser ] Content: 'ERROR: 415'
+[15:14:18][AssertJsonKw][WARNING] Error parsing JSON: Unexpected character (',' (code 44)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: (String)"{"id": , "name": "updated", "email": "updated@email.com", "phoneNumber": "+420777666444"}"; line: 1, column: 9]
+[15:14:18][AssertJsonKw][WARNING] Assertion failed. True was expected as the result. Condition: (Expected JSON '{"id": , "name": "updated", "email": "updated@email.com", "phoneNumber": "+420777666444"}' must be same as the JSON in the variable 'ERROR: 415')
+[15:14:18][TestSuiteKw][ERROR] Test suite 'Testování aktualizace uživatelů' - Test case 'Test aktualizace uživatele' failed
+[15:14:19][MessageBuffer][INFO] Message buffer cleared
+[15:14:19][TestSuiteKw][INFO] Test case 'Test aktualizace uživatele s neplatnými údaji 1' starts executing now
+[15:14:19][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[15:14:19][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:19.670+01:00  WARN 18956 --- [RESTAPIServer] [nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]'
+[15:14:19][RESTTester][WARNING] (user-all) HTTP request returned an error status: 415
+[15:14:19][MessageBuffer][INFO] Message added to buffer [ Mod: user-all | Tag: http://localhost:8080/users ] Content: 'ERROR: 415'
+[15:14:19][NATTContext][INFO] Data has been stored in to the variable 'var-user'. Data value: 
+[15:14:19][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[15:14:19][RESTTester][INFO] (user-edit) Sending a PUT request on endpoint: http://localhost:8080/editUser
+[15:14:19][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:19.696+01:00  WARN 18956 --- [RESTAPIServer] [nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'id' for method parameter type Long is not present]'
+[15:14:19][RESTTester][WARNING] (user-edit) HTTP request returned an error status: 400
+[15:14:19][MessageBuffer][INFO] Message added to buffer [ Mod: user-edit | Tag: http://localhost:8080/editUser ] Content: 'ERROR: 400'
+[15:14:19][TestSuiteKw][INFO] Test suite 'Testování aktualizace uživatelů' - Test case 'Test aktualizace uživatele s neplatnými údaji 1' passed
+[15:14:19][MessageBuffer][INFO] Message buffer cleared
+[15:14:20][TestSuiteKw][INFO] Test case 'Test aktualizace uživatele s neplatnými údaji 2' starts executing now
+[15:14:20][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[15:14:20][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:20.380+01:00  WARN 18956 --- [RESTAPIServer] [io-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]'
+[15:14:20][RESTTester][WARNING] (user-all) HTTP request returned an error status: 415
+[15:14:20][MessageBuffer][INFO] Message added to buffer [ Mod: user-all | Tag: http://localhost:8080/users ] Content: 'ERROR: 415'
+[15:14:20][NATTContext][INFO] Data has been stored in to the variable 'var-user'. Data value: 
+[15:14:20][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[15:14:20][RESTTester][INFO] (user-edit) Sending a PUT request on endpoint: http://localhost:8080/editUser
+[15:14:20][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:20.400+01:00  WARN 18956 --- [RESTAPIServer] [nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'id' for method parameter type Long is not present]'
+[15:14:20][RESTTester][WARNING] (user-edit) HTTP request returned an error status: 400
+[15:14:20][MessageBuffer][INFO] Message added to buffer [ Mod: user-edit | Tag: http://localhost:8080/editUser ] Content: 'ERROR: 400'
+[15:14:20][TestSuiteKw][INFO] Test suite 'Testování aktualizace uživatelů' - Test case 'Test aktualizace uživatele s neplatnými údaji 2' passed
+[15:14:20][MessageBuffer][INFO] Message buffer cleared
+[15:14:21][MessageBuffer][INFO] Message buffer cleared
+[15:14:21][RESTTester][INFO] (user-edit) REST tester [user-edit] terminated
+[15:14:21][RESTTester][INFO] (user-get) REST tester [user-get] terminated
+[15:14:21][RESTTester][INFO] (user-all) REST tester [user-all] terminated
+[15:14:21][MessageBuffer][INFO] Message buffer created for module with name: user-delete
+[15:14:21][MessageBuffer][INFO] Message buffer created for module with name: user-delete-all
+[15:14:21][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[15:14:21][RESTTester][WARNING] (user-create) HTTP request returned an error status: 400
+[15:14:21][MessageBuffer][INFO] Message added to buffer [ Mod: user-create | Tag: http://localhost:8080/createUser ] Content: 'ERROR: 400'
+[15:14:21][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[15:14:21][RESTTester][WARNING] (user-create) HTTP request returned an error status: 400
+[15:14:21][MessageBuffer][INFO] Message added to buffer [ Mod: user-create | Tag: http://localhost:8080/createUser ] Content: 'ERROR: 400'
+[15:14:21][TestSuiteKw][INFO] Test case 'Test odstranění jednoho uživatele' starts executing now
+[15:14:21][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[15:14:21][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:21.270+01:00  WARN 18956 --- [RESTAPIServer] [nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]'
+[15:14:21][RESTTester][WARNING] (user-all) HTTP request returned an error status: 415
+[15:14:21][MessageBuffer][INFO] Message added to buffer [ Mod: user-all | Tag: http://localhost:8080/users ] Content: 'ERROR: 415'
+[15:14:21][NATTContext][INFO] Data has been stored in to the variable 'var-user'. Data value: 
+[15:14:21][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[15:14:21][RESTTester][INFO] (user-delete) Sending a DELETE request on endpoint: http://localhost:8080/deleteUser
+[15:14:21][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:21.278+01:00  WARN 18956 --- [RESTAPIServer] [nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]'
+[15:14:21][RESTTester][WARNING] (user-delete) HTTP request returned an error status: 415
+[15:14:21][MessageBuffer][INFO] Message added to buffer [ Mod: user-delete | Tag: http://localhost:8080/deleteUser ] Content: 'ERROR: 415'
+[15:14:21][RESTTester][INFO] (user-get) Sending a GET request on endpoint: http://localhost:8080/getUser
+[15:14:21][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:21.286+01:00  WARN 18956 --- [RESTAPIServer] [nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]'
+[15:14:21][RESTTester][WARNING] (user-get) HTTP request returned an error status: 415
+[15:14:21][MessageBuffer][INFO] Message added to buffer [ Mod: user-get | Tag: http://localhost:8080/getUser ] Content: 'ERROR: 415'
+[15:14:21][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable 'ERROR: 415' must contains expected text 'ERROR: 404')
+[15:14:21][TestSuiteKw][ERROR] Test suite 'Testování požadavků pro odstranění' - Test case 'Test odstranění jednoho uživatele' failed
+[15:14:21][MessageBuffer][INFO] Message buffer cleared
+[15:14:21][TestSuiteKw][INFO] Test case 'Test odstranění všech uživatelů' starts executing now
+[15:14:21][RESTTester][INFO] (user-delete-all) Sending a DELETE request on endpoint: http://localhost:8080/deleteAll
+[15:14:21][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:21.963+01:00  WARN 18956 --- [RESTAPIServer] [nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]'
+[15:14:21][RESTTester][WARNING] (user-delete-all) HTTP request returned an error status: 415
+[15:14:21][MessageBuffer][INFO] Message added to buffer [ Mod: user-delete-all | Tag: http://localhost:8080/deleteAll ] Content: 'ERROR: 415'
+[15:14:21][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[15:14:21][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:14:21.970+01:00  WARN 18956 --- [RESTAPIServer] [nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type is not supported]'
+[15:14:21][RESTTester][WARNING] (user-all) HTTP request returned an error status: 415
+[15:14:21][MessageBuffer][INFO] Message added to buffer [ Mod: user-all | Tag: http://localhost:8080/users ] Content: 'ERROR: 415'
+[15:14:21][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable 'ERROR: 415' must contains expected text '[]')
+[15:14:21][TestSuiteKw][ERROR] Test suite 'Testování požadavků pro odstranění' - Test case 'Test odstranění všech uživatelů' failed
+[15:14:22][MessageBuffer][INFO] Message buffer cleared
+[15:14:22][MessageBuffer][INFO] Message buffer cleared
+[15:14:22][RESTTester][INFO] (user-delete) REST tester [user-delete] terminated
+[15:14:22][RESTTester][INFO] (user-delete-all) REST tester [user-delete-all] terminated
+[15:14:22][RESTTester][INFO] (user-all) REST tester [user-all] terminated
+[15:14:22][RESTTester][INFO] (user-get) REST tester [user-get] terminated
+[15:14:22][RESTTester][INFO] (user-create) REST tester [user-create] terminated
+[15:14:22][MessageBuffer][INFO] Message buffer cleared
+[15:14:22][ExternalProgramRunner][INFO] (default) Termiting external application
+[15:14:22][ProcessManager][INFO] PID (18956) removed from file
+[15:14:22][RESTTester][INFO] (module-1) REST tester [module-1] terminated
+[15:14:22][ProcessManager][INFO] PID (18956) removed from file
+[15:14:22][NATTCore][INFO] Test executing finished
+[15:14:22][NATTCore][INFO] Start generating test report
+[15:14:22][ExternalProgramRunner][WARNING] (default) External application ends with error: 1
+[15:14:23][TestReportGenerator][INFO] Report saved to file
+[15:14:23][NATTCore][WARNING] Failed test cases: "Test vytvoření uživatele", "Test aktualizace uživatele", "Test odstranění jednoho uživatele", "Test odstranění všech uživatelů"
+[15:14:23][NATTCore][INFO] Final score: 5,000000
+[15:14:23][NATTCore][ERROR] Testing done. Leaving status: FAILED

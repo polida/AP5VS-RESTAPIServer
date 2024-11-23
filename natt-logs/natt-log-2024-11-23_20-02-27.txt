@@ -1,0 +1,201 @@
+[20:02:27][PluginLoader][WARNING] Plugins directory not found.
+[20:02:27][ProcessManager][WARNING] Failed to terminate process PID 9764
+[20:02:27][NATTCore][INFO] NATT CORE initialization done
+Version: 1.7.0 
+Configuration path: https://gitlab.com/ap5vs/test-config/restful-api-server-config/-/raw/main/test-config-6.yaml?ref_type=heads
+Configuration loading mode: FROM URL
+[20:02:27][NATTCore][INFO] Working directory path: C:\Users\polid\IdeaProjects\AP5VS-RESTAPIServer
+[20:02:27][NATTCore][INFO] Start loading of the configuration file ...
+[20:02:28][NetworkIO][INFO] Yaml data has been loaded from network location (https://gitlab.com/ap5vs/test-config/restful-api-server-config/-/raw/main/test-config-6.yaml?ref_type=heads)
+[20:02:28][NATTCore][INFO] Configuration loading done
+[20:02:28][NATTCore][INFO] Start building test structure according to the configuration ...
+[20:02:28][NATTCore][INFO] Test structure ...
+[20:02:28][NATTCore][INFO] Test structure building done
+[20:02:28][NATTCore][INFO] Start test executing ...
+[20:02:29][TestReportGenerator][INFO] Extenet reports generated. Final report will be saved to file: test_report.html
+[20:02:29][NATTCore][INFO] Starts execution on the root keyword  ...
+[20:02:29][MessageBuffer][INFO] Message buffer created for module with name: default
+[20:02:29][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar build/libs/RESTAPIServer-0.0.1-SNAPSHOT.jar
+[20:02:29][ProcessManager][INFO] New PID (10148) added to file
+[20:02:29][WaitUntilKw][INFO] Waiting for action. Actions count: 1, Time out: 30000 ms
+[20:02:30][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[20:02:30][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '  .   ____          _            __ _ _'
+[20:02:30][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \'
+[20:02:30][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \'
+[20:02:30][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' \\/  ___)| |_)| | | | | || (_| |  ) ) ) )'
+[20:02:30][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '  '  |____| .__|_| |_|_| |_\__, | / / / /'
+[20:02:30][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' =========|_|==============|___/=/_/_/_/'
+[20:02:30][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' :: Spring Boot ::                (v3.2.4)'
+[20:02:30][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[20:02:30][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:30.840+01:00  INFO 10148 --- [RESTAPIServer] [           main] u.f.R.RestapiServerApplication           : Starting RestapiServerApplication v0.0.1-SNAPSHOT using Java 17.0.12 with PID 10148 (C:\Users\polid\IdeaProjects\AP5VS-RESTAPIServer\build\libs\RESTAPIServer-0.0.1-SNAPSHOT.jar started by polid in C:\Users\polid\IdeaProjects\AP5VS-RESTAPIServer)'
+[20:02:30][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:30.847+01:00  INFO 10148 --- [RESTAPIServer] [           main] u.f.R.RestapiServerApplication           : No active profile set, falling back to 1 default profile: "default"'
+[20:02:32][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:32.322+01:00  INFO 10148 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode'
+[20:02:32][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:32.324+01:00  INFO 10148 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.'
+[20:02:32][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:32.384+01:00  INFO 10148 --- [RESTAPIServer] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface utb.fai.RESTAPIServer.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.'
+[20:02:32][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:32.387+01:00  INFO 10148 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 0 JDBC repository interfaces.'
+[20:02:32][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:32.402+01:00  INFO 10148 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode'
+[20:02:32][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:32.405+01:00  INFO 10148 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.'
+[20:02:32][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:32.446+01:00  INFO 10148 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interface.'
+[20:02:33][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:33.460+01:00  INFO 10148 --- [RESTAPIServer] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)'
+[20:02:33][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:33.489+01:00  INFO 10148 --- [RESTAPIServer] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]'
+[20:02:33][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:33.490+01:00  INFO 10148 --- [RESTAPIServer] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]'
+[20:02:33][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:33.550+01:00  INFO 10148 --- [RESTAPIServer] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext'
+[20:02:33][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:33.553+01:00  INFO 10148 --- [RESTAPIServer] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2527 ms'
+[20:02:33][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:33.833+01:00  INFO 10148 --- [RESTAPIServer] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]'
+[20:02:33][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:33.966+01:00  INFO 10148 --- [RESTAPIServer] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final'
+[20:02:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:34.037+01:00  INFO 10148 --- [RESTAPIServer] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled'
+[20:02:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:34.492+01:00  INFO 10148 --- [RESTAPIServer] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer'
+[20:02:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:34.542+01:00  INFO 10148 --- [RESTAPIServer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...'
+[20:02:35][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:35.443+01:00  INFO 10148 --- [RESTAPIServer] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@35dcd032'
+[20:02:35][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:35.446+01:00  INFO 10148 --- [RESTAPIServer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.'
+[20:02:36][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:36.766+01:00  INFO 10148 --- [RESTAPIServer] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)'
+[20:02:36][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Hibernate: create table my_user (id bigint not null, email varchar(255), name varchar(255), phone_number varchar(255), primary key (id)) engine=InnoDB'
+[20:02:37][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:37.017+01:00  INFO 10148 --- [RESTAPIServer] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default''
+[20:02:37][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:37.505+01:00  WARN 10148 --- [RESTAPIServer] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning'
+[20:02:38][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:38.361+01:00  INFO 10148 --- [RESTAPIServer] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '''
+[20:02:38][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:38.402+01:00  INFO 10148 --- [RESTAPIServer] [           main] u.f.R.RestapiServerApplication           : Started RestapiServerApplication in 8.423 seconds (process running for 9.284)'
+[20:02:38][WaitUntilKw][INFO] Action triggered from module 'default'
+[20:02:38][NATTContext][INFO] Data has been stored in to the variable 'default-action-msg'. Data value: 2024-11-23T20:02:38.402+01:00  INFO 10148 --- [RESTAPIServer] [           main] u.f.R.RestapiServerApplication           : Started RestapiServerApplication in 8.423 seconds (process running for 9.284)
+[20:02:38][WaitUntilKw][INFO] Action was invoked. Elapsed time: 9322 ms
+[20:02:38][MessageBuffer][INFO] Message buffer created for module with name: module-1
+[20:02:38][RESTTester][INFO] (module-1) Sending a DELETE request on endpoint: http://localhost:8080/deleteAll
+[20:02:38][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:38.704+01:00  INFO 10148 --- [RESTAPIServer] [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet''
+[20:02:38][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:38.704+01:00  INFO 10148 --- [RESTAPIServer] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet''
+[20:02:38][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:38.706+01:00  INFO 10148 --- [RESTAPIServer] [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms'
+[20:02:39][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Hibernate: select mu1_0.id,mu1_0.email,mu1_0.name,mu1_0.phone_number from my_user mu1_0'
+[20:02:39][MessageBuffer][INFO] Message buffer created for module with name: user-create
+[20:02:39][MessageBuffer][INFO] Message buffer created for module with name: user-get
+[20:02:39][TestSuiteKw][INFO] Test case 'Test vytvoření uživatele' starts executing now
+[20:02:39][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[20:02:39][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Hibernate: select count(*) from my_user mu1_0 where mu1_0.id=?'
+[20:02:39][RESTTester][WARNING] (user-create) HTTP request returned an error status: 400
+[20:02:39][MessageBuffer][INFO] Message added to buffer [ Mod: user-create | Tag: http://localhost:8080/createUser ] Content: 'ERROR: 400'
+[20:02:40][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[20:02:40][RESTTester][INFO] (user-get) Sending a GET request on endpoint: http://localhost:8080/getUser
+[20:02:40][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:40.143+01:00  WARN 10148 --- [RESTAPIServer] [nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'id' for method parameter type Long is not present]'
+[20:02:40][RESTTester][WARNING] (user-get) HTTP request returned an error status: 400
+[20:02:40][MessageBuffer][INFO] Message added to buffer [ Mod: user-get | Tag: http://localhost:8080/getUser ] Content: 'ERROR: 400'
+[20:02:40][AssertJsonKw][WARNING] Error parsing JSON: Unexpected character (',' (code 44)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: (String)"{"id": , "name": "User1", "email": "test@email.com", "phoneNumber": "+420666555444"}"; line: 1, column: 9]
+[20:02:40][AssertJsonKw][WARNING] Assertion failed. True was expected as the result. Condition: (Expected JSON '{"id": , "name": "User1", "email": "test@email.com", "phoneNumber": "+420666555444"}' must be same as the JSON in the variable 'ERROR: 400')
+[20:02:40][TestSuiteKw][ERROR] Test suite 'Testování vytváření uživatelů' - Test case 'Test vytvoření uživatele' failed
+[20:02:40][MessageBuffer][INFO] Message buffer cleared
+[20:02:40][TestSuiteKw][INFO] Test case 'Test vytvoření uživatele s neplatným emailem' starts executing now
+[20:02:40][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[20:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Hibernate: select count(*) from my_user mu1_0 where mu1_0.id=?'
+[20:02:41][RESTTester][WARNING] (user-create) HTTP request returned an error status: 400
+[20:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: user-create | Tag: http://localhost:8080/createUser ] Content: 'ERROR: 400'
+[20:02:41][TestSuiteKw][INFO] Test suite 'Testování vytváření uživatelů' - Test case 'Test vytvoření uživatele s neplatným emailem' passed
+[20:02:41][MessageBuffer][INFO] Message buffer cleared
+[20:02:41][TestSuiteKw][INFO] Test case 'Test vytvoření uživatele s neplatným telefonem' starts executing now
+[20:02:41][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[20:02:42][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Hibernate: select count(*) from my_user mu1_0 where mu1_0.id=?'
+[20:02:42][RESTTester][WARNING] (user-create) HTTP request returned an error status: 400
+[20:02:42][MessageBuffer][INFO] Message added to buffer [ Mod: user-create | Tag: http://localhost:8080/createUser ] Content: 'ERROR: 400'
+[20:02:42][TestSuiteKw][INFO] Test suite 'Testování vytváření uživatelů' - Test case 'Test vytvoření uživatele s neplatným telefonem' passed
+[20:02:42][MessageBuffer][INFO] Message buffer cleared
+[20:02:43][MessageBuffer][INFO] Message buffer cleared
+[20:02:43][RESTTester][INFO] (user-create) REST tester [user-create] terminated
+[20:02:43][RESTTester][INFO] (user-get) REST tester [user-get] terminated
+[20:02:43][MessageBuffer][INFO] Message buffer created for module with name: user-edit
+[20:02:43][MessageBuffer][INFO] Message buffer created for module with name: user-all
+[20:02:43][TestSuiteKw][INFO] Test case 'Test aktualizace uživatele' starts executing now
+[20:02:43][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[20:02:43][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Hibernate: select mu1_0.id,mu1_0.email,mu1_0.name,mu1_0.phone_number from my_user mu1_0'
+[20:02:43][MessageBuffer][INFO] Message added to buffer [ Mod: user-all | Tag: http://localhost:8080/users ] Content: '[]'
+[20:02:43][NATTContext][INFO] Data has been stored in to the variable 'var-user'. Data value: 
+[20:02:43][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[20:02:43][RESTTester][INFO] (user-edit) Sending a PUT request on endpoint: http://localhost:8080/editUser
+[20:02:43][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:43.363+01:00  WARN 10148 --- [RESTAPIServer] [nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'id' for method parameter type Long is not present]'
+[20:02:43][RESTTester][WARNING] (user-edit) HTTP request returned an error status: 400
+[20:02:43][MessageBuffer][INFO] Message added to buffer [ Mod: user-edit | Tag: http://localhost:8080/editUser ] Content: 'ERROR: 400'
+[20:02:43][RESTTester][INFO] (user-get) Sending a GET request on endpoint: http://localhost:8080/getUser
+[20:02:43][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:43.396+01:00  WARN 10148 --- [RESTAPIServer] [nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'id' for method parameter type Long is not present]'
+[20:02:43][RESTTester][WARNING] (user-get) HTTP request returned an error status: 400
+[20:02:43][MessageBuffer][INFO] Message added to buffer [ Mod: user-get | Tag: http://localhost:8080/getUser ] Content: 'ERROR: 400'
+[20:02:43][AssertJsonKw][WARNING] Error parsing JSON: Unexpected character (',' (code 44)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
+ at [Source: (String)"{"id": , "name": "updated", "email": "updated@email.com", "phoneNumber": "+420777666444"}"; line: 1, column: 9]
+[20:02:43][AssertJsonKw][WARNING] Assertion failed. True was expected as the result. Condition: (Expected JSON '{"id": , "name": "updated", "email": "updated@email.com", "phoneNumber": "+420777666444"}' must be same as the JSON in the variable 'ERROR: 400')
+[20:02:43][TestSuiteKw][ERROR] Test suite 'Testování aktualizace uživatelů' - Test case 'Test aktualizace uživatele' failed
+[20:02:43][MessageBuffer][INFO] Message buffer cleared
+[20:02:44][TestSuiteKw][INFO] Test case 'Test aktualizace uživatele s neplatnými údaji 1' starts executing now
+[20:02:44][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[20:02:44][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Hibernate: select mu1_0.id,mu1_0.email,mu1_0.name,mu1_0.phone_number from my_user mu1_0'
+[20:02:44][MessageBuffer][INFO] Message added to buffer [ Mod: user-all | Tag: http://localhost:8080/users ] Content: '[]'
+[20:02:44][NATTContext][INFO] Data has been stored in to the variable 'var-user'. Data value: 
+[20:02:44][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[20:02:44][RESTTester][INFO] (user-edit) Sending a PUT request on endpoint: http://localhost:8080/editUser
+[20:02:44][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:44.369+01:00  WARN 10148 --- [RESTAPIServer] [nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'id' for method parameter type Long is not present]'
+[20:02:44][RESTTester][WARNING] (user-edit) HTTP request returned an error status: 400
+[20:02:44][MessageBuffer][INFO] Message added to buffer [ Mod: user-edit | Tag: http://localhost:8080/editUser ] Content: 'ERROR: 400'
+[20:02:44][TestSuiteKw][INFO] Test suite 'Testování aktualizace uživatelů' - Test case 'Test aktualizace uživatele s neplatnými údaji 1' passed
+[20:02:44][MessageBuffer][INFO] Message buffer cleared
+[20:02:45][TestSuiteKw][INFO] Test case 'Test aktualizace uživatele s neplatnými údaji 2' starts executing now
+[20:02:45][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[20:02:45][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Hibernate: select mu1_0.id,mu1_0.email,mu1_0.name,mu1_0.phone_number from my_user mu1_0'
+[20:02:45][MessageBuffer][INFO] Message added to buffer [ Mod: user-all | Tag: http://localhost:8080/users ] Content: '[]'
+[20:02:45][NATTContext][INFO] Data has been stored in to the variable 'var-user'. Data value: 
+[20:02:45][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[20:02:45][RESTTester][INFO] (user-edit) Sending a PUT request on endpoint: http://localhost:8080/editUser
+[20:02:45][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:45.311+01:00  WARN 10148 --- [RESTAPIServer] [nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'id' for method parameter type Long is not present]'
+[20:02:45][RESTTester][WARNING] (user-edit) HTTP request returned an error status: 400
+[20:02:45][MessageBuffer][INFO] Message added to buffer [ Mod: user-edit | Tag: http://localhost:8080/editUser ] Content: 'ERROR: 400'
+[20:02:45][TestSuiteKw][INFO] Test suite 'Testování aktualizace uživatelů' - Test case 'Test aktualizace uživatele s neplatnými údaji 2' passed
+[20:02:45][MessageBuffer][INFO] Message buffer cleared
+[20:02:46][MessageBuffer][INFO] Message buffer cleared
+[20:02:46][RESTTester][INFO] (user-edit) REST tester [user-edit] terminated
+[20:02:46][RESTTester][INFO] (user-get) REST tester [user-get] terminated
+[20:02:46][RESTTester][INFO] (user-all) REST tester [user-all] terminated
+[20:02:46][MessageBuffer][INFO] Message buffer created for module with name: user-delete
+[20:02:46][MessageBuffer][INFO] Message buffer created for module with name: user-delete-all
+[20:02:46][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[20:02:46][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Hibernate: select count(*) from my_user mu1_0 where mu1_0.id=?'
+[20:02:46][RESTTester][WARNING] (user-create) HTTP request returned an error status: 400
+[20:02:46][MessageBuffer][INFO] Message added to buffer [ Mod: user-create | Tag: http://localhost:8080/createUser ] Content: 'ERROR: 400'
+[20:02:46][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[20:02:46][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Hibernate: select count(*) from my_user mu1_0 where mu1_0.id=?'
+[20:02:46][RESTTester][WARNING] (user-create) HTTP request returned an error status: 400
+[20:02:46][MessageBuffer][INFO] Message added to buffer [ Mod: user-create | Tag: http://localhost:8080/createUser ] Content: 'ERROR: 400'
+[20:02:46][TestSuiteKw][INFO] Test case 'Test odstranění jednoho uživatele' starts executing now
+[20:02:46][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[20:02:46][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Hibernate: select mu1_0.id,mu1_0.email,mu1_0.name,mu1_0.phone_number from my_user mu1_0'
+[20:02:46][MessageBuffer][INFO] Message added to buffer [ Mod: user-all | Tag: http://localhost:8080/users ] Content: '[]'
+[20:02:46][NATTContext][INFO] Data has been stored in to the variable 'var-user'. Data value: 
+[20:02:46][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[20:02:46][RESTTester][INFO] (user-delete) Sending a DELETE request on endpoint: http://localhost:8080/deleteUser
+[20:02:46][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:46.872+01:00  WARN 10148 --- [RESTAPIServer] [nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'id' for method parameter type Long is not present]'
+[20:02:46][RESTTester][WARNING] (user-delete) HTTP request returned an error status: 400
+[20:02:46][MessageBuffer][INFO] Message added to buffer [ Mod: user-delete | Tag: http://localhost:8080/deleteUser ] Content: 'ERROR: 400'
+[20:02:46][RESTTester][INFO] (user-get) Sending a GET request on endpoint: http://localhost:8080/getUser
+[20:02:46][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T20:02:46.879+01:00  WARN 10148 --- [RESTAPIServer] [nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'id' for method parameter type Long is not present]'
+[20:02:46][RESTTester][WARNING] (user-get) HTTP request returned an error status: 400
+[20:02:46][MessageBuffer][INFO] Message added to buffer [ Mod: user-get | Tag: http://localhost:8080/getUser ] Content: 'ERROR: 400'
+[20:02:46][AssertEqualsKw][WARNING] Assertion failed. True was expected as the result. Condition: (Value of variable 'ERROR: 400' must contains expected text 'ERROR: 404')
+[20:02:46][TestSuiteKw][ERROR] Test suite 'Testování požadavků pro odstranění' - Test case 'Test odstranění jednoho uživatele' failed
+[20:02:47][MessageBuffer][INFO] Message buffer cleared
+[20:02:47][TestSuiteKw][INFO] Test case 'Test odstranění všech uživatelů' starts executing now
+[20:02:47][RESTTester][INFO] (user-delete-all) Sending a DELETE request on endpoint: http://localhost:8080/deleteAll
+[20:02:47][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Hibernate: select mu1_0.id,mu1_0.email,mu1_0.name,mu1_0.phone_number from my_user mu1_0'
+[20:02:47][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[20:02:47][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Hibernate: select mu1_0.id,mu1_0.email,mu1_0.name,mu1_0.phone_number from my_user mu1_0'
+[20:02:47][MessageBuffer][INFO] Message added to buffer [ Mod: user-all | Tag: http://localhost:8080/users ] Content: '[]'
+[20:02:47][TestSuiteKw][ERROR] Test suite 'Testování požadavků pro odstranění' - Test case 'Test odstranění všech uživatelů' failed
+[20:02:48][MessageBuffer][INFO] Message buffer cleared
+[20:02:48][MessageBuffer][INFO] Message buffer cleared
+[20:02:48][RESTTester][INFO] (user-delete) REST tester [user-delete] terminated
+[20:02:48][RESTTester][INFO] (user-delete-all) REST tester [user-delete-all] terminated
+[20:02:48][RESTTester][INFO] (user-all) REST tester [user-all] terminated
+[20:02:48][RESTTester][INFO] (user-get) REST tester [user-get] terminated
+[20:02:48][RESTTester][INFO] (user-create) REST tester [user-create] terminated
+[20:02:48][MessageBuffer][INFO] Message buffer cleared
+[20:02:48][ExternalProgramRunner][INFO] (default) Termiting external application
+[20:02:48][ProcessManager][INFO] PID (10148) removed from file
+[20:02:48][RESTTester][INFO] (module-1) REST tester [module-1] terminated
+[20:02:48][ProcessManager][INFO] PID (10148) removed from file
+[20:02:48][NATTCore][INFO] Test executing finished
+[20:02:48][NATTCore][INFO] Start generating test report
+[20:02:48][ExternalProgramRunner][WARNING] (default) External application ends with error: 1
+[20:02:49][TestReportGenerator][INFO] Report saved to file
+[20:02:49][NATTCore][WARNING] Failed test cases: "Test root initialization", "Test vytvoření uživatele", "Test aktualizace uživatele", "Test odstranění jednoho uživatele", "Test odstranění všech uživatelů"
+[20:02:49][NATTCore][INFO] Final score: 5,000000
+[20:02:49][NATTCore][ERROR] Testing done. Leaving status: FAILED
