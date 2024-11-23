@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 @Entity
 public class MyUser {
     @Id
-    private long id;
+    private Long id;
     private String name;
     private String email;
     private String phoneNumber;
@@ -45,7 +45,7 @@ public class MyUser {
     }
 
     public boolean isUserDataValid() {
-        return isEmailValid(this.email) && isPhoneNumberValid(this.phoneNumber) && isNameValid(this.name);
+        return isEmailValid(this.email) && isPhoneNumberValid(this.phoneNumber) && isNameValid(this.name) && isIdValid(this.id);
     }
 
     private boolean isEmailValid(String email) {
@@ -57,5 +57,8 @@ public class MyUser {
     }
     private boolean isNameValid(String name) {
         return name.matches("^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$");
+    }
+    private boolean isIdValid(Long id) {
+        return id >= 0;
     }
 }
