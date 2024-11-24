@@ -1,0 +1,76 @@
+[17:02:32][PluginLoader][WARNING] Plugins directory not found.
+[17:02:32][NATTCore][INFO] NATT CORE initialization done
+Version: 1.7.0 
+Configuration path: .\test-config-6.yaml
+Configuration loading mode: FROM HOST
+[17:02:32][NATTCore][INFO] Working directory path: C:\Users\polid\IdeaProjects\AP5VS-RESTAPIServer
+[17:02:32][NATTCore][INFO] Start loading of the configuration file ...
+[17:02:32][LocalHostIO][INFO] Yaml data has been loaded from file (.\test-config-6.yaml)
+[17:02:32][NATTCore][INFO] Configuration loading done
+[17:02:32][NATTCore][INFO] Start building test structure according to the configuration ...
+[17:02:32][NATTCore][INFO] Test structure ...
+[17:02:32][NATTCore][INFO] Test structure building done
+[17:02:32][NATTCore][INFO] Start test executing ...
+[17:02:33][TestReportGenerator][INFO] Extenet reports generated. Final report will be saved to file: test_report.html
+[17:02:33][NATTCore][INFO] Starts execution on the root keyword  ...
+[17:02:33][MessageBuffer][INFO] Message buffer created for module with name: default
+[17:02:33][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar build/libs/RESTAPIServer-0.0.1-SNAPSHOT.jar
+[17:02:33][ProcessManager][INFO] New PID (32996) added to file
+[17:02:33][WaitUntilKw][INFO] Waiting for action. Actions count: 1, Time out: 30000 ms
+[17:02:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[17:02:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '  .   ____          _            __ _ _'
+[17:02:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \'
+[17:02:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \'
+[17:02:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' \\/  ___)| |_)| | | | | || (_| |  ) ) ) )'
+[17:02:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '  '  |____| .__|_| |_|_| |_\__, | / / / /'
+[17:02:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' =========|_|==============|___/=/_/_/_/'
+[17:02:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' :: Spring Boot ::                (v3.2.4)'
+[17:02:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[17:02:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:34.773+01:00  INFO 32996 --- [RESTAPIServer] [           main] u.f.R.RestapiServerApplication           : Starting RestapiServerApplication v0.0.1-SNAPSHOT using Java 17.0.12 with PID 32996 (C:\Users\polid\IdeaProjects\AP5VS-RESTAPIServer\build\libs\RESTAPIServer-0.0.1-SNAPSHOT.jar started by polid in C:\Users\polid\IdeaProjects\AP5VS-RESTAPIServer)'
+[17:02:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:34.778+01:00  INFO 32996 --- [RESTAPIServer] [           main] u.f.R.RestapiServerApplication           : No active profile set, falling back to 1 default profile: "default"'
+[17:02:36][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:36.103+01:00  INFO 32996 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode'
+[17:02:36][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:36.106+01:00  INFO 32996 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.'
+[17:02:36][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:36.150+01:00  INFO 32996 --- [RESTAPIServer] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface utb.fai.RESTAPIServer.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.'
+[17:02:36][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:36.151+01:00  INFO 32996 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 0 JDBC repository interfaces.'
+[17:02:36][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:36.169+01:00  INFO 32996 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode'
+[17:02:36][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:36.170+01:00  INFO 32996 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.'
+[17:02:36][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:36.221+01:00  INFO 32996 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.'
+[17:02:37][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:37.173+01:00  INFO 32996 --- [RESTAPIServer] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)'
+[17:02:37][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:37.191+01:00  INFO 32996 --- [RESTAPIServer] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]'
+[17:02:37][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:37.191+01:00  INFO 32996 --- [RESTAPIServer] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]'
+[17:02:37][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:37.261+01:00  INFO 32996 --- [RESTAPIServer] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext'
+[17:02:37][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:37.264+01:00  INFO 32996 --- [RESTAPIServer] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2328 ms'
+[17:02:37][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:37.520+01:00  INFO 32996 --- [RESTAPIServer] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]'
+[17:02:37][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:37.626+01:00  INFO 32996 --- [RESTAPIServer] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final'
+[17:02:37][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:37.693+01:00  INFO 32996 --- [RESTAPIServer] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled'
+[17:02:38][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:38.103+01:00  INFO 32996 --- [RESTAPIServer] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer'
+[17:02:38][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:38.147+01:00  INFO 32996 --- [RESTAPIServer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...'
+[17:02:38][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:38.983+01:00  INFO 32996 --- [RESTAPIServer] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@fabef2e'
+[17:02:38][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:38.985+01:00  INFO 32996 --- [RESTAPIServer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.'
+[17:02:39][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:39.122+01:00  WARN 32996 --- [RESTAPIServer] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)'
+[17:02:40][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:40.209+01:00  INFO 32996 --- [RESTAPIServer] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)'
+[17:02:40][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:40.367+01:00  INFO 32996 --- [RESTAPIServer] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default''
+[17:02:40][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:40.786+01:00  WARN 32996 --- [RESTAPIServer] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning'
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:41.548+01:00  WARN 32996 --- [RESTAPIServer] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop''
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:41.550+01:00  INFO 32996 --- [RESTAPIServer] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default''
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:41.554+01:00  INFO 32996 --- [RESTAPIServer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...'
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:41.851+01:00  INFO 32996 --- [RESTAPIServer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.'
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:41.871+01:00  INFO 32996 --- [RESTAPIServer] [           main] .s.b.a.l.ConditionEvaluationReportLogger : '
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.'
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T17:02:41.906+01:00 ERROR 32996 --- [RESTAPIServer] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : '
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '***************************'
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'APPLICATION FAILED TO START'
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '***************************'
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Description:'
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Web server failed to start. Port 8080 was already in use.'
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Action:'
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.'
+[17:02:41][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[17:02:41][ProcessManager][INFO] PID (32996) removed from file
+[17:02:42][ExternalProgramRunner][WARNING] (default) External application ends with error: 1

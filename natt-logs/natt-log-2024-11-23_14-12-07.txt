@@ -1,0 +1,184 @@
+[14:12:07][PluginLoader][WARNING] Plugins directory not found.
+[14:12:07][NATTCore][INFO] NATT CORE initialization done
+Version: 1.7.0 
+Configuration path: https://gitlab.com/ap5vs/test-config/restful-api-server-config/-/raw/main/test-config-6.yaml?ref_type=heads
+Configuration loading mode: FROM URL
+[14:12:07][NATTCore][INFO] Working directory path: C:\Users\polid\IdeaProjects\AP5VS-RESTAPIServer
+[14:12:07][NATTCore][INFO] Start loading of the configuration file ...
+[14:12:08][NetworkIO][INFO] Yaml data has been loaded from network location (https://gitlab.com/ap5vs/test-config/restful-api-server-config/-/raw/main/test-config-6.yaml?ref_type=heads)
+[14:12:08][NATTCore][INFO] Configuration loading done
+[14:12:08][NATTCore][INFO] Start building test structure according to the configuration ...
+[14:12:08][NATTCore][INFO] Test structure ...
+[14:12:08][NATTCore][INFO] Test structure building done
+[14:12:08][NATTCore][INFO] Start test executing ...
+[14:12:08][TestReportGenerator][INFO] Extenet reports generated. Final report will be saved to file: test_report.html
+[14:12:08][NATTCore][INFO] Starts execution on the root keyword  ...
+[14:12:08][MessageBuffer][INFO] Message buffer created for module with name: default
+[14:12:08][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar build/libs/RESTAPIServer-0.0.1-SNAPSHOT.jar
+[14:12:08][ProcessManager][INFO] New PID (20868) added to file
+[14:12:08][WaitUntilKw][INFO] Waiting for action. Actions count: 1, Time out: 30000 ms
+[14:12:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[14:12:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '  .   ____          _            __ _ _'
+[14:12:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \'
+[14:12:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \'
+[14:12:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' \\/  ___)| |_)| | | | | || (_| |  ) ) ) )'
+[14:12:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '  '  |____| .__|_| |_|_| |_\__, | / / / /'
+[14:12:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' =========|_|==============|___/=/_/_/_/'
+[14:12:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' :: Spring Boot ::                (v3.2.4)'
+[14:12:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[14:12:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:10.356+01:00  INFO 20868 --- [RESTAPIServer] [           main] u.f.R.RestapiServerApplication           : Starting RestapiServerApplication v0.0.1-SNAPSHOT using Java 17.0.12 with PID 20868 (C:\Users\polid\IdeaProjects\AP5VS-RESTAPIServer\build\libs\RESTAPIServer-0.0.1-SNAPSHOT.jar started by polid in C:\Users\polid\IdeaProjects\AP5VS-RESTAPIServer)'
+[14:12:10][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:10.363+01:00  INFO 20868 --- [RESTAPIServer] [           main] u.f.R.RestapiServerApplication           : No active profile set, falling back to 1 default profile: "default"'
+[14:12:11][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:11.570+01:00  INFO 20868 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode'
+[14:12:11][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:11.572+01:00  INFO 20868 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.'
+[14:12:11][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:11.612+01:00  INFO 20868 --- [RESTAPIServer] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface utb.fai.RESTAPIServer.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.'
+[14:12:11][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:11.614+01:00  INFO 20868 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 JDBC repository interfaces.'
+[14:12:11][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:11.632+01:00  INFO 20868 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode'
+[14:12:11][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:11.634+01:00  INFO 20868 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.'
+[14:12:11][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:11.668+01:00  INFO 20868 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 1 JPA repository interface.'
+[14:12:12][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:12.546+01:00  INFO 20868 --- [RESTAPIServer] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)'
+[14:12:12][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:12.566+01:00  INFO 20868 --- [RESTAPIServer] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]'
+[14:12:12][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:12.566+01:00  INFO 20868 --- [RESTAPIServer] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]'
+[14:12:12][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:12.633+01:00  INFO 20868 --- [RESTAPIServer] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext'
+[14:12:12][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:12.636+01:00  INFO 20868 --- [RESTAPIServer] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2129 ms'
+[14:12:12][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:12.883+01:00  INFO 20868 --- [RESTAPIServer] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]'
+[14:12:12][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:12.975+01:00  INFO 20868 --- [RESTAPIServer] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final'
+[14:12:13][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:13.030+01:00  INFO 20868 --- [RESTAPIServer] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled'
+[14:12:13][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:13.419+01:00  INFO 20868 --- [RESTAPIServer] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer'
+[14:12:13][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:13.464+01:00  INFO 20868 --- [RESTAPIServer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...'
+[14:12:14][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:14.298+01:00  INFO 20868 --- [RESTAPIServer] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5cc3e49b'
+[14:12:14][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:14.304+01:00  INFO 20868 --- [RESTAPIServer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.'
+[14:12:14][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:14.461+01:00  WARN 20868 --- [RESTAPIServer] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)'
+[14:12:15][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:15.559+01:00  INFO 20868 --- [RESTAPIServer] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)'
+[14:12:15][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:15.735+01:00  INFO 20868 --- [RESTAPIServer] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default''
+[14:12:16][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:16.119+01:00  WARN 20868 --- [RESTAPIServer] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning'
+[14:12:16][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:16.709+01:00  WARN 20868 --- [RESTAPIServer] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop''
+[14:12:16][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:16.711+01:00  INFO 20868 --- [RESTAPIServer] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default''
+[14:12:16][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:16.716+01:00  INFO 20868 --- [RESTAPIServer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...'
+[14:12:16][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:16.976+01:00  INFO 20868 --- [RESTAPIServer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.'
+[14:12:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:17.015+01:00  INFO 20868 --- [RESTAPIServer] [           main] .s.b.a.l.ConditionEvaluationReportLogger : '
+[14:12:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[14:12:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.'
+[14:12:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T14:12:17.044+01:00 ERROR 20868 --- [RESTAPIServer] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : '
+[14:12:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[14:12:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '***************************'
+[14:12:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'APPLICATION FAILED TO START'
+[14:12:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '***************************'
+[14:12:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[14:12:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Description:'
+[14:12:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[14:12:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Web server failed to start. Port 8080 was already in use.'
+[14:12:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[14:12:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Action:'
+[14:12:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[14:12:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: 'Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.'
+[14:12:17][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[14:12:17][ProcessManager][INFO] PID (20868) removed from file
+[14:12:17][ExternalProgramRunner][WARNING] (default) External application ends with error: 1
+[14:12:38][WaitUntilKw][WARNING] Timeout.. Action was not invoked!
+[14:12:38][MessageBuffer][INFO] Message buffer created for module with name: module-1
+[14:12:39][RESTTester][INFO] (module-1) Sending a DELETE request on endpoint: http://localhost:8080/deleteAll
+[14:12:39][RESTTester][WARNING] (module-1) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:39][MessageBuffer][INFO] Message buffer created for module with name: user-create
+[14:12:39][MessageBuffer][INFO] Message buffer created for module with name: user-get
+[14:12:39][TestSuiteKw][INFO] Test case 'Test vytvoření uživatele' starts executing now
+[14:12:39][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[14:12:39][RESTTester][WARNING] (user-create) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:39][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[14:12:39][RESTTester][INFO] (user-get) Sending a GET request on endpoint: http://localhost:8080/getUser
+[14:12:39][RESTTester][WARNING] (user-get) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:39][AssertJsonKw][WARNING] Assertion failed. Variable 'user-get-last-msg' not found!
+[14:12:39][TestSuiteKw][ERROR] Test suite 'Testování vytváření uživatelů' - Test case 'Test vytvoření uživatele' failed
+[14:12:39][MessageBuffer][INFO] Message buffer cleared
+[14:12:39][TestSuiteKw][INFO] Test case 'Test vytvoření uživatele s neplatným emailem' starts executing now
+[14:12:39][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[14:12:39][RESTTester][WARNING] (user-create) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:39][AssertEqualsKw][WARNING] Assertion failed. Variable 'user-create-last-msg' not found!
+[14:12:39][TestSuiteKw][ERROR] Test suite 'Testování vytváření uživatelů' - Test case 'Test vytvoření uživatele s neplatným emailem' failed
+[14:12:40][MessageBuffer][INFO] Message buffer cleared
+[14:12:40][TestSuiteKw][INFO] Test case 'Test vytvoření uživatele s neplatným telefonem' starts executing now
+[14:12:40][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[14:12:40][RESTTester][WARNING] (user-create) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:40][AssertEqualsKw][WARNING] Assertion failed. Variable 'user-create-last-msg' not found!
+[14:12:40][TestSuiteKw][ERROR] Test suite 'Testování vytváření uživatelů' - Test case 'Test vytvoření uživatele s neplatným telefonem' failed
+[14:12:40][MessageBuffer][INFO] Message buffer cleared
+[14:12:41][MessageBuffer][INFO] Message buffer cleared
+[14:12:41][RESTTester][INFO] (user-create) REST tester [user-create] terminated
+[14:12:41][RESTTester][INFO] (user-get) REST tester [user-get] terminated
+[14:12:41][MessageBuffer][INFO] Message buffer created for module with name: user-edit
+[14:12:41][MessageBuffer][INFO] Message buffer created for module with name: user-all
+[14:12:41][TestSuiteKw][INFO] Test case 'Test aktualizace uživatele' starts executing now
+[14:12:41][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[14:12:41][RESTTester][WARNING] (user-all) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:41][NATTContext][INFO] Data has been stored in to the variable 'var-user'. Data value: 
+[14:12:41][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[14:12:41][RESTTester][INFO] (user-edit) Sending a PUT request on endpoint: http://localhost:8080/editUser
+[14:12:41][RESTTester][WARNING] (user-edit) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:41][RESTTester][INFO] (user-get) Sending a GET request on endpoint: http://localhost:8080/getUser
+[14:12:41][RESTTester][WARNING] (user-get) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:41][AssertJsonKw][WARNING] Assertion failed. Variable 'user-get-last-msg' not found!
+[14:12:41][TestSuiteKw][ERROR] Test suite 'Testování aktualizace uživatelů' - Test case 'Test aktualizace uživatele' failed
+[14:12:41][MessageBuffer][INFO] Message buffer cleared
+[14:12:42][TestSuiteKw][INFO] Test case 'Test aktualizace uživatele s neplatnými údaji 1' starts executing now
+[14:12:42][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[14:12:42][RESTTester][WARNING] (user-all) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:42][NATTContext][INFO] Data has been stored in to the variable 'var-user'. Data value: 
+[14:12:42][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[14:12:42][RESTTester][INFO] (user-edit) Sending a PUT request on endpoint: http://localhost:8080/editUser
+[14:12:42][RESTTester][WARNING] (user-edit) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:42][AssertEqualsKw][WARNING] Assertion failed. Variable 'user-edit-last-msg' not found!
+[14:12:42][TestSuiteKw][ERROR] Test suite 'Testování aktualizace uživatelů' - Test case 'Test aktualizace uživatele s neplatnými údaji 1' failed
+[14:12:42][MessageBuffer][INFO] Message buffer cleared
+[14:12:43][TestSuiteKw][INFO] Test case 'Test aktualizace uživatele s neplatnými údaji 2' starts executing now
+[14:12:43][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[14:12:43][RESTTester][WARNING] (user-all) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:43][NATTContext][INFO] Data has been stored in to the variable 'var-user'. Data value: 
+[14:12:43][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[14:12:43][RESTTester][INFO] (user-edit) Sending a PUT request on endpoint: http://localhost:8080/editUser
+[14:12:43][RESTTester][WARNING] (user-edit) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:43][AssertEqualsKw][WARNING] Assertion failed. Variable 'user-edit-last-msg' not found!
+[14:12:43][TestSuiteKw][ERROR] Test suite 'Testování aktualizace uživatelů' - Test case 'Test aktualizace uživatele s neplatnými údaji 2' failed
+[14:12:43][MessageBuffer][INFO] Message buffer cleared
+[14:12:43][MessageBuffer][INFO] Message buffer cleared
+[14:12:43][RESTTester][INFO] (user-edit) REST tester [user-edit] terminated
+[14:12:43][RESTTester][INFO] (user-get) REST tester [user-get] terminated
+[14:12:43][RESTTester][INFO] (user-all) REST tester [user-all] terminated
+[14:12:43][MessageBuffer][INFO] Message buffer created for module with name: user-delete
+[14:12:43][MessageBuffer][INFO] Message buffer created for module with name: user-delete-all
+[14:12:43][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[14:12:43][RESTTester][WARNING] (user-create) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:43][RESTTester][INFO] (user-create) Sending a POST request on endpoint: http://localhost:8080/createUser
+[14:12:43][RESTTester][WARNING] (user-create) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:43][TestSuiteKw][INFO] Test case 'Test odstranění jednoho uživatele' starts executing now
+[14:12:43][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[14:12:43][RESTTester][WARNING] (user-all) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:43][NATTContext][INFO] Data has been stored in to the variable 'var-user'. Data value: 
+[14:12:43][NATTContext][INFO] Data has been stored in to the variable 'var-id'. Data value: 
+[14:12:43][RESTTester][INFO] (user-delete) Sending a DELETE request on endpoint: http://localhost:8080/deleteUser
+[14:12:43][RESTTester][WARNING] (user-delete) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:43][RESTTester][INFO] (user-get) Sending a GET request on endpoint: http://localhost:8080/getUser
+[14:12:43][RESTTester][WARNING] (user-get) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:43][AssertEqualsKw][WARNING] Assertion failed. Variable 'user-get-last-msg' not found!
+[14:12:43][TestSuiteKw][ERROR] Test suite 'Testování požadavků pro odstranění' - Test case 'Test odstranění jednoho uživatele' failed
+[14:12:44][MessageBuffer][INFO] Message buffer cleared
+[14:12:44][TestSuiteKw][INFO] Test case 'Test odstranění všech uživatelů' starts executing now
+[14:12:44][RESTTester][INFO] (user-delete-all) Sending a DELETE request on endpoint: http://localhost:8080/deleteAll
+[14:12:44][RESTTester][WARNING] (user-delete-all) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:44][RESTTester][INFO] (user-all) Sending a GET request on endpoint: http://localhost:8080/users
+[14:12:44][RESTTester][WARNING] (user-all) Failed to send or process message: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+[14:12:44][AssertEqualsKw][WARNING] Assertion failed. Variable 'user-all-last-msg' not found!
+[14:12:44][TestSuiteKw][ERROR] Test suite 'Testování požadavků pro odstranění' - Test case 'Test odstranění všech uživatelů' failed
+[14:12:44][MessageBuffer][INFO] Message buffer cleared
+[14:12:45][MessageBuffer][INFO] Message buffer cleared
+[14:12:45][RESTTester][INFO] (user-delete) REST tester [user-delete] terminated
+[14:12:45][RESTTester][INFO] (user-delete-all) REST tester [user-delete-all] terminated
+[14:12:45][RESTTester][INFO] (user-all) REST tester [user-all] terminated
+[14:12:45][RESTTester][INFO] (user-get) REST tester [user-get] terminated
+[14:12:45][RESTTester][INFO] (user-create) REST tester [user-create] terminated
+[14:12:45][MessageBuffer][INFO] Message buffer cleared
+[14:12:45][RESTTester][INFO] (module-1) REST tester [module-1] terminated
+[14:12:45][NATTCore][INFO] Test executing finished
+[14:12:45][NATTCore][INFO] Start generating test report
+[14:12:45][TestReportGenerator][INFO] Report saved to file
+[14:12:45][NATTCore][WARNING] Failed test cases: "Test root initialization", "Test suite 'Testování požadavků pro odstranění' initialization", "Test vytvoření uživatele", "Test vytvoření uživatele s neplatným emailem", "Test vytvoření uživatele s neplatným telefonem", "Test aktualizace uživatele", "Test aktualizace uživatele s neplatnými údaji 1", "Test aktualizace uživatele s neplatnými údaji 2", "Test odstranění jednoho uživatele", "Test odstranění všech uživatelů"
+[14:12:45][NATTCore][INFO] Final score: 0,000000
+[14:12:45][NATTCore][ERROR] Testing done. Leaving status: FAILED

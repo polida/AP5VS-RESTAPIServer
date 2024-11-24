@@ -1,0 +1,7 @@
+[15:46:27][PluginLoader][WARNING] Plugins directory not found.
+[15:46:27][NATTCore][INFO] NATT CORE initialization done
+Version: 1.7.0 
+Configuration path: .test-config-6.yaml?ref_type=heads
+Configuration loading mode: FROM URL
+[15:46:27][NATTCore][INFO] Working directory path: C:\Users\polid\IdeaProjects\AP5VS-RESTAPIServer
+[15:46:27][NATTCore][INFO] Start loading of the configuration file ...

@@ -53,6 +53,9 @@ public class UserController {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
             MyUser existingUser = user.get();
+            if (!existingUser.isUserDataValid()) {
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            }
             existingUser.setName(updatedUser.getName());
             existingUser.setEmail(updatedUser.getEmail());
             existingUser.setPhoneNumber(updatedUser.getPhoneNumber());

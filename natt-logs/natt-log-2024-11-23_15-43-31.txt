@@ -1,0 +1,45 @@
+[15:43:31][PluginLoader][WARNING] Plugins directory not found.
+[15:43:31][NATTCore][INFO] NATT CORE initialization done
+Version: 1.7.0 
+Configuration path: https://gitlab.com/ap5vs/test-config/restful-api-server-config/-/raw/main/test-config-6.yaml?ref_type=heads
+Configuration loading mode: FROM URL
+[15:43:31][NATTCore][INFO] Working directory path: C:\Users\polid\IdeaProjects\AP5VS-RESTAPIServer
+[15:43:31][NATTCore][INFO] Start loading of the configuration file ...
+[15:43:32][NetworkIO][INFO] Yaml data has been loaded from network location (https://gitlab.com/ap5vs/test-config/restful-api-server-config/-/raw/main/test-config-6.yaml?ref_type=heads)
+[15:43:32][NATTCore][INFO] Configuration loading done
+[15:43:32][NATTCore][INFO] Start building test structure according to the configuration ...
+[15:43:32][NATTCore][INFO] Test structure ...
+[15:43:32][NATTCore][INFO] Test structure building done
+[15:43:32][NATTCore][INFO] Start test executing ...
+[15:43:33][TestReportGenerator][INFO] Extenet reports generated. Final report will be saved to file: test_report.html
+[15:43:33][NATTCore][INFO] Starts execution on the root keyword  ...
+[15:43:33][MessageBuffer][INFO] Message buffer created for module with name: default
+[15:43:33][ExternalProgramRunner][INFO] (default) Run external app with command: java -jar build/libs/RESTAPIServer-0.0.1-SNAPSHOT.jar
+[15:43:33][ProcessManager][INFO] New PID (8380) added to file
+[15:43:33][WaitUntilKw][INFO] Waiting for action. Actions count: 1, Time out: 30000 ms
+[15:43:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[15:43:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '  .   ____          _            __ _ _'
+[15:43:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \'
+[15:43:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \'
+[15:43:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' \\/  ___)| |_)| | | | | || (_| |  ) ) ) )'
+[15:43:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '  '  |____| .__|_| |_|_| |_\__, | / / / /'
+[15:43:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' =========|_|==============|___/=/_/_/_/'
+[15:43:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ' :: Spring Boot ::                (v3.2.4)'
+[15:43:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: ''
+[15:43:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:43:34.976+01:00  INFO 8380 --- [RESTAPIServer] [           main] u.f.R.RestapiServerApplication           : Starting RestapiServerApplication v0.0.1-SNAPSHOT using Java 17.0.12 with PID 8380 (C:\Users\polid\IdeaProjects\AP5VS-RESTAPIServer\build\libs\RESTAPIServer-0.0.1-SNAPSHOT.jar started by polid in C:\Users\polid\IdeaProjects\AP5VS-RESTAPIServer)'
+[15:43:34][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:43:34.983+01:00  INFO 8380 --- [RESTAPIServer] [           main] u.f.R.RestapiServerApplication           : No active profile set, falling back to 1 default profile: "default"'
+[15:43:37][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:43:37.213+01:00  INFO 8380 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode'
+[15:43:37][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:43:37.220+01:00  INFO 8380 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.'
+[15:43:37][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:43:37.284+01:00  INFO 8380 --- [RESTAPIServer] [           main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface utb.fai.RESTAPIServer.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.'
+[15:43:37][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:43:37.285+01:00  INFO 8380 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 0 JDBC repository interfaces.'
+[15:43:37][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:43:37.305+01:00  INFO 8380 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode'
+[15:43:37][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:43:37.311+01:00  INFO 8380 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.'
+[15:43:37][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:43:37.378+01:00  INFO 8380 --- [RESTAPIServer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.'
+[15:43:39][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:43:39.160+01:00  INFO 8380 --- [RESTAPIServer] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)'
+[15:43:39][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:43:39.187+01:00  INFO 8380 --- [RESTAPIServer] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]'
+[15:43:39][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:43:39.188+01:00  INFO 8380 --- [RESTAPIServer] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]'
+[15:43:39][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:43:39.273+01:00  INFO 8380 --- [RESTAPIServer] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext'
+[15:43:39][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:43:39.276+01:00  INFO 8380 --- [RESTAPIServer] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4112 ms'
+[15:43:39][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:43:39.600+01:00  INFO 8380 --- [RESTAPIServer] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]'
+[15:43:39][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:43:39.718+01:00  INFO 8380 --- [RESTAPIServer] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final'
+[15:43:39][MessageBuffer][INFO] Message added to buffer [ Mod: default | Tag:  ] Content: '2024-11-23T15:43:39.787+01:00  INFO 8380 --- [RESTAPIServer] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled'
